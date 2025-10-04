@@ -25,7 +25,7 @@ export class PluginScene {
   async loadPlugin(url) {
     try {
       const resp = await import(url)
-      await url.initalize({
+      await resp.init({
         HomeScene,
         globalState,
         patch,
